@@ -5,9 +5,23 @@ pip install -r requirements.txt
 Git commands- 
 1. For cloning repo
 git clone "path"
+
 2. For commiting changes
 git add .
 git commit -m "name"
+git push origin main
+
+3. To remove large files and push to main
+pip install git-filter-repo
+git filter-repo --path file.csv --invert-paths
+git push origin --force --all
+
+4. To push file above github's standard limit
+git lfs install
+git lfs track "file.csv"
+git add .gitattributes
+git add file.csv
+git commit -m "Add large file with Git LFS"
 git push origin main
 
 
@@ -52,9 +66,9 @@ Design the agent to take appropriate actions based on the decisions made.
 Implement a feedback loop using DQN RL to allow the agent to learn and improve over time.
 
 #How to enhance AI Agent Capabilities-
-1. Plan using
-Personalized Services
-AI can offer personalized recommendations and services to customers, enhancing their overall experience. For example, AI can suggest suitable financial products or investment opportunities based on a customer's profile and preferences.
+1. Plan or setting goals-
+<!-- Personalized Services
+AI can offer personalized recommendations and services to customers, enhancing their overall experience. For example, AI can suggest suitable financial products or investment opportunities based on a customer's profile and preferences. -->
 
 2. NLP for Input Processing
 Use GPT-based models to process and understand incoming data. This involves tokenizing the input, understanding the context, and preparing the data for decision-making.
@@ -62,8 +76,8 @@ Use GPT-based models to process and understand incoming data. This involves toke
 3. Decision Logic
 Integrate your deep learning models for fraud detection, transaction risk, churn prediction, and customer segmentation and use decision automation as stated below-
 
-Decision Automation
-AI can automate routine decision-making processes, such as loan approvals, credit scoring, and transaction verification. This not only speeds up operations but also reduces the chance of human error.
+<!-- Decision Automation
+AI can automate routine decision-making processes, such as loan approvals, credit scoring, and transaction verification. This not only speeds up operations but also reduces the chance of human error. -->
 
 4. Action Implementation
 Based on the decisions, define the actions your agent will take. This could involve flagging transactions, sending alerts, updating user profiles, etc.
